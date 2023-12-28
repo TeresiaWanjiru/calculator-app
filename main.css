@@ -1,0 +1,99 @@
+* {
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.calculator{
+    background-color: rgb(39, 10, 66);
+    max-width: 375px;
+    /* min-height: 650px; */
+     height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+    
+}
+.display{
+    min-height: 200px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: rgba(85, 19, 147, 0.137);
+    color: blanchedalmond;
+    text-align: right;
+    flex: 1 1 0%;
+}
+.display .input{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.display .output{
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
+.display .operator {
+    color: rgb(55, 184, 219);
+}
+.display .brackets,
+.display .percent {
+    color:brown;
+}
+
+.keys {
+    /* background-color: rgba(75, 16, 130); */
+    padding: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: (5,1fr);
+    grid-gap: 1rem;
+    box-shadow: 0px -2px 16px rgba(0,0,0,0.2);
+}
+.keys .key{
+    /* display: block; */
+    background-color:rgba(22, 6, 37, 0.352);
+    height: 0;
+    position: relative;
+    padding-top: 100%;
+    display: block;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+}
+.keys .key span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 26px;
+    font-weight: 700;
+    color: blanchedalmond;
+}
+.keys .key:hover{
+    box-shadow: inset 0px 0px 8px rgba(0,0,0,0.9);
+}
+.keys .key.action span{
+    color: brown;
+}
+
+.keys .key.operator span{
+    color:rgb(55, 184, 219);
+}

@@ -1,0 +1,6 @@
+//splice method
+//slice method
+//split method
+//indexOf
+//lastIndexOf
+//push method
